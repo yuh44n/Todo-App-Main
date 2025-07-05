@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+#theme{
+    cursor: pointer;
+}
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.background {
+    background-image: url(images/bg-desktop-dark.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 40vh;
+    transition: background-image 0.3s ease;
+}
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin: -200px auto 0 auto;
+}
+.head h1{
+    position: relative;
+    color: white;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    right : 150px;
+}
+.head img{
+    position: relative;
+    left : 150px;
+}
+.input {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+.input input {
+    background-color: hsl(237, 14%, 26%);
+    border: none;
+    height: 50px;
+    width: 40vw;
+    border-radius: 5px;
+    outline: none;
+    caret-color: transparent;
+    padding-left: 40px;
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.input input::placeholder {
+    color: hsl(234, 11%, 52%);
+}
+
+#check {
+    border: 1px solid hsl(234, 11%, 52%);
+    outline: none;
+    background: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 29%;
+    top: 30%;
+    z-index: 2;
+    cursor: pointer;
+}
+.list{
+    border: 1px solid hsl(234, 11%, 52%);
+    border-collapse: collapse;
+    display: flex;
+    position: relative;
+    background-color: hsl(237, 14%, 26%);
+    width: 43vw;
+    margin: 20px auto 0 auto;
+    border-radius: 5px 5px 0 0;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+}
+.list ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.list li{
+    border-bottom: 1px solid hsl(234, 11%, 52%);
+    border-collapse: collapse;
+    transition: color 0.3s ease;
+    
+}
+
+.list ul li {
+    position: relative;
+    padding-left: 35px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.list ul li::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 1px solid hsl(234, 11%, 52%);
+    border-radius: 50%;
+    background: none;
+    transition: all 0.3s ease;
+}
+
+.list ul li.completed::before {
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: none;
+    background-image: url('images/icon-check.svg'); 
+    background-size: 12px 12px; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.list ul li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: hsl(234, 11%, 52%);
+}
+
+.bottom {
+    border: 1px solid hsl(234, 11%, 52%);
+    border-top: 0;
+    display: flex;
+    position: relative;
+    color: hsl(234, 11%, 52%);
+    font-size: 14px;
+    justify-content: center;
+    background-color: hsl(237, 14%, 26%);
+    width: 43vw;
+    margin: 0 auto 0 auto;;
+    border-radius: 0 0 5px 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+
+    
+}
+#left {
+    position: relative;
+    right: 80px;
+}
+.filter input[type="radio"] {
+    display: none;
+}
+.filter {
+    position: relative;
+    justify-content: center;
+}
+.filter label:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.filter input[type="radio"]:checked + label {
+    text-decoration: underline;
+    color: hsl(220, 98%, 61%);
+}
+.filter label {
+    margin: 0 5px;
+}
+.dark-background {
+    background-color: hsl(234, 17%, 11%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+}
+
+.footer {
+    color: hsl(233, 15%, 43%);
+    width: 100vw;
+    padding-top: 65px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 1;
+}
+.drag , .attribution {
+    display: flex;              
+    justify-content: center;
+    position: relative;
+
+}
+#clear{
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    position: relative;
+    left: 100px;
+    color: hsl(234, 11%, 52%);
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+#clear:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body.light-theme {
+   background-color: #fafafa;
+   color: #484b6a;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.background.light-theme {
+   background-image: url(images/bg-desktop-light.jpg);
+   transition: background-image 0.3s ease;
+}
+
+.input input.light-theme {
+   background-color: white;
+   color: #484b6a;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.list.light-theme {
+   background-color: white;
+   border-color: #e4e5f1;
+   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.list.light-theme li {
+   color: #484b6a;
+   transition: color 0.3s ease;
+}
+
+.bottom.light-theme {
+   background-color: white;
+   border-color: #e4e5f1;
+   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-background.light-theme {
+   background-color: #fafafa;
+   transition: background-color 0.3s ease;
+}
+
+.dragging { opacity: 0.5; }
