@@ -144,18 +144,18 @@ body {
     border: 1px solid hsl(234, 11%, 52%);
     border-top: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     color: hsl(234, 11%, 52%);
     font-size: 14px;
-    justify-content: center;
     background-color: hsl(237, 14%, 26%);
     width: 43vw;
-    margin: 0 auto 0 auto;;
+    margin: 0 auto 0 auto;
     border-radius: 0 0 5px 5px;
+    padding: 15px 20px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
-
-    
 }
 
 .filter input[type="radio"] {
@@ -205,13 +205,10 @@ body {
 #clear{
     font-family: "Josefin Sans", sans-serif;
     font-size: 14px;
-    position: relative;
-    left: 100px;
     color: hsl(234, 11%, 52%);
     background: none;
     border: none;
     cursor: pointer;
-
 }
 #clear:hover {
     cursor: pointer;
